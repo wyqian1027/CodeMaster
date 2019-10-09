@@ -1,0 +1,50 @@
+[
+    {
+        "model": "main.method",
+        "pk": "1",
+        "fields": {
+            "method_name": "heappush",
+            "parent_library": 1,
+            "parent_language": 1,
+            "use_example": "heappush(h, item)",
+            "short_description": "Push item to Min-Heap.",
+            "long_description": ""
+        }
+    },
+    {
+        "model": "main.method",
+        "pk": "2",
+        "fields": {
+            "method_name": "heappop",
+            "parent_library": 1,
+            "parent_language": 1,
+            "use_example": "heappop(h)",
+            "short_description": "Pop the top item from Min-Heap.",
+            "long_description": ""
+        }
+    },
+    {
+        "model": "main.method",
+        "pk": "3",
+        "fields": {
+            "method_name": "heapify",
+            "parent_library": 1,
+            "parent_language": 1,
+            "use_example": "heapify(h)",
+            "short_description": "Transform List into Min-Heap.",
+            "long_description": ""
+        }
+    },
+    {
+        "model": "main.method",
+        "pk": "4",
+        "fields": {
+            "method_name": "getcwd",
+            "parent_library": 2,
+            "parent_language": 1,
+            "use_example": "getcwd()",
+            "short_description": "Get current working directory.",
+            "long_description": ""
+        }
+    }
+]

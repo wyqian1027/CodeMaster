@@ -1,0 +1,47 @@
+  <nav class="navbar navbar-default" style="background-color: white;" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div>
+            <a class="navbar-brand" href="/" style="margin: auto;">Code Master &nbsp; {{ subtitle }} &nbsp;</a>
+            {% if language_name %}
+              <a href="/all/{{language_name}}" class="navbar-brand" style="color:blue;"> {{ language_name }} </a> 
+            {% endif %}
+            {% if library_name %}
+              <a class="navbar-brand" ">  => </a> 
+              <a href="/all/{{language_name}}/{{library_name}}" class="navbar-brand" style="color:red;"> {{ library_name }} </a>
+            {% endif %}
+            {% if method_name %}
+              <a class="navbar-brand" ">  => </a> 
+              <a href="/all/{{language_name}}/{{library_name}}/{{method_name}}" class="navbar-brand" style="color:green;"> {{ method_name }}</a>
+            {% endif %}
+          </div>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></a>
+  
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Add New Method</a></li>
+                <li><a href="#">Add New Library</a></li>
+                <li><a href="/add_lang">Add New Language</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Login</a></li>
+                <li class="divider"></li>
+                <li><a href="#">About</a></li>
+              </ul>
+            </li>
+          </ul>
+          
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
