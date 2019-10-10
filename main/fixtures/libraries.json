@@ -3,21 +3,24 @@
         "model": "main.library",
         "pk": "1",
         "fields": {
-            "library_name": "heapq"
+            "library_name": "heapq",
+            "parent_language": "1"
         }
     },
     {
         "model": "main.library",
         "pk": "2",
         "fields": {
-            "library_name": "os"
+            "library_name": "os",
+            "parent_language": "1"
         }
     },
     {
         "model": "main.library",
         "pk": "3",
         "fields": {
-            "library_name": "collections"
+            "library_name": "collections",
+            "parent_language": "1"
         }
     }
 ]

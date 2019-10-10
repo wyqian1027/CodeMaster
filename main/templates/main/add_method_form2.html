@@ -1,0 +1,51 @@
+{% extends "header/header.html" %}
+
+
+{% block content %}
+
+{{ form.media }}
+<div class="container" style="max-width: 800px;">
+
+    <form method="POST" role="form">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <div class="row" style="text-align: center">
+            <div class="form-group">
+                {{ form.parent_language.errors }}
+                <label class="help-block form-label" for="{{ form.parent_language.id_for_label }}" ">Parent Language</label> 
+                {{ form.parent_language }}
+            </div>
+            <a style="margin_bottom:5px;" href="/add_meth" class="btn btn-warning" type="submit">Go Back</a>
+            <div class="form-group">
+                {{ form.parent_library.errors }}
+                <label class="help-block form-label" for="{{ form.parent_library.id_for_label }}" ">Parent Library</label> 
+                {{ form.parent_library }}
+            </div>
+            <div class="form-group">
+                {{ form.method_name.errors }}
+                <label class="help-block form-label" for="{{ form.method_name.id_for_label }}" ">Method Name</label> 
+                {{ form.method_name }}
+            </div>
+            <div class="form-group">
+                {{ form.short_description.errors }}
+                <label class="help-block form-label" for="{{ form.short_description.id_for_label }}" ">Short Description</label> 
+                {{ form.short_description }}
+            </div>
+            <div class="form-group">
+                {{ form.use_example.errors }}
+                <label class="help-block form-label" for="{{ form.use_example.id_for_label }}" ">Example</label> 
+                {{ form.use_example }}
+            </div>
+            <div class="form-group">
+                {{ form.long_description.errors }}
+                <label class="help-block form-label" for="{{ form.long_description.id_for_label }}" ">More Information</label> 
+                {{ form.long_description }}
+            </div>
+        </div>
+        <div class="row" style="text-align: center">
+            <button id="tiny-submit" class="btn btn-success" type="submit">Add</button>
+        </div>
+    </form>
+</div>    
+
+{% endblock %}

@@ -36,6 +36,9 @@
     /* body {
         margin:20px 20px;
     }  */
+    .form-label {
+        color: grey;
+    }
     </style>
 
 </head>
@@ -44,8 +47,10 @@
     {% include "includes/navbar.html" %}
     {% include "includes/messages.html" %}
     
+    <div>
     {% block content %}
     {% endblock %}
+    </div>
 </body>
 <script>
 $(document).ready(function(){

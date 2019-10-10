@@ -9,7 +9,7 @@
             <span class="icon-bar"></span>
           </button>
           <div>
-            <a class="navbar-brand" href="/" style="margin: auto;">Code Master &nbsp; {{ subtitle }} &nbsp;</a>
+            <a class="navbar-brand" href="/" style="margin: auto;">Code Master </a><a class="navbar-brand" style="color: brown;">&nbsp; {{ subtitle }} &nbsp;</a>
             {% if language_name %}
               <a href="/all/{{language_name}}" class="navbar-brand" style="color:blue;"> {{ language_name }} </a> 
             {% endif %}
@@ -31,8 +31,8 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></a>
   
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Add New Method</a></li>
-                <li><a href="#">Add New Library</a></li>
+                <li><a href="/add_meth">Add New Method</a></li>
+                <li><a href="/add_lib">Add New Library</a></li>
                 <li><a href="/add_lang">Add New Language</a></li>
                 <li class="divider"></li>
                 <li><a href="#">Login</a></li>

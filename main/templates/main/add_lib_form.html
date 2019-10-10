@@ -11,9 +11,12 @@
         {{ form.non_field_errors }}
         <div class="row" style="text-align: center">
             <div class="form-group">
-                {{ form.language_name.errors }}
-                <label class="help-block form-label" for="{{ form.language_name.id_for_label }}" ">Language Name</label> 
-                {{ form.language_name }}
+                {{ form.parent_language.errors }}
+                <label class="help-block form-label" for="{{ form.parent_language.id_for_label }}" ">Parent Language</label> 
+                {{ form.parent_language }}
+                {{ form.library_name.errors }}
+                <label class="help-block form-label" for="{{ form.library_name.id_for_label }}" ">Library Name</label> 
+                {{ form.library_name }}
             </div>
         </div>
         <div class="row" style="text-align: center">
