@@ -9,17 +9,18 @@
             <span class="icon-bar"></span>
           </button>
           <div>
-            <a class="navbar-brand" href="/" style="margin: auto;">Code Master </a><a class="navbar-brand" style="color: brown;">&nbsp; {{ subtitle }} &nbsp;</a>
+            <a class="navbar-brand" href="/" style="margin: auto;">Home</a>
+            <a class="navbar-brand" href="/" style="margin: auto;">{{subtitle}}</a>
             {% if language_name %}
-              <a href="/all/{{language_name}}" class="navbar-brand" style="color:blue;"> {{ language_name }} </a> 
+            <a href="/all/{{language_name}}" class="navbar-brand" style="color:green;">{{language_name }} </a> 
             {% endif %}
             {% if library_name %}
-              <a class="navbar-brand" ">  => </a> 
-              <a href="/all/{{language_name}}/{{library_name}}" class="navbar-brand" style="color:red;"> {{ library_name }} </a>
+              <a class="navbar-brand" ">  / </a> 
+              <a href="/all/{{language_name}}/{{library_name}}" class="navbar-brand" style="color:#82AAFF;"> {{ library_name }} </a>
             {% endif %}
             {% if method_name %}
-              <a class="navbar-brand" ">  => </a> 
-              <a href="/all/{{language_name}}/{{library_name}}/{{method_name}}" class="navbar-brand" style="color:green;"> {{ method_name }}</a>
+              <a class="navbar-brand" ">  / </a> 
+              <a href="/all/{{language_name}}/{{library_name}}/{{method_name}}" class="navbar-brand" style="color:#FF6560;"> {{ method_name }}</a>
             {% endif %}
           </div>
         </div>
@@ -35,9 +36,9 @@
                 <li><a href="/add_lib">Add New Library</a></li>
                 <li><a href="/add_lang">Add New Language</a></li>
                 <li class="divider"></li>
-                <li><a href="#">Login</a></li>
+                <li class="disabled"><a href="#">Login</a></li>
                 <li class="divider"></li>
-                <li><a href="#">About</a></li>
+                <li class="disabled"><a href="#">About</a></li>
               </ul>
             </li>
           </ul>

@@ -4,31 +4,38 @@
 
 	{% load static %}
     <div class="" style="margin-top:10px;">
-        <!-- <div class="row header" style="text-align:center;color:green">
-            <h3>Bootstrap</h3>
-        </div> -->
+        
         <table id="myTable" class="table table-striped" >
             <thead>
                 <tr>
                 <th>Library</th>
                 <th>Method</th>
-                <th>Description</th>
                 <th>Example</th>
+                <th>Description</th>
                 <th>Language</th>
                 </tr>
             </thead>
             <tbody>
                 {% for method in methods %}
-                <tr>
-                <td width="10%">&nbsp; <a href="/all/{{method.parent_language.language_name}}/{{method.parent_library.library_name}}">{{method.parent_library.library_name}} </a></td>
-                <td >&nbsp; <a href="/all/{{method.parent_language.language_name}}/{{method.parent_library.library_name}}/{{method.method_name}}">{{method.method_name}}</a></td>
-                <td>&nbsp; {{method.short_description}}</td>
-                <td>&nbsp; {{method.use_example}}</td>
-                <td width="10%">&nbsp; <a href="/all/{{method.parent_language.language_name}}">{{method.parent_language.language_name}} </a></td>
+                <tr class="table-row">
+                <td class="td-lib"><a href="/all/{{method.parent_language.language_name}}/{{method.parent_library.library_name}}">{{method.parent_library.library_name}} </a></td>
+                <td class="td-meth"><a href="/all/{{method.parent_language.language_name}}/{{method.parent_library.library_name}}/{{method.method_name}}">{{method.method_name}}</a></td>
+                <td class="td-ex">{{method.use_example}}</td>
+                <td class="td-des">{{method.short_description}}</td>
+                <td class="td-lang"><a href="/all/{{method.parent_language.language_name}}">{{method.parent_language.language_name}} </a></td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
+    </div>
+    <div class="">
+        {% if longDescription %}
+        <div class="more-info container">
+            <br>
+            <p class="long-des-title"></p>
+            <p class="long-des-text">{{longDescription|safe}}</p>
+        </div>
+        {% endif %}
     </div>
         
     

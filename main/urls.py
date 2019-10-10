@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 app_name = "main"
@@ -12,6 +12,6 @@ urlpatterns = [
     path('add_lib', views.add_new_library_request, name='addLibRequest'),
     path('add_meth/<language_id>', views.add_new_method_request_helper, name='addMethRequestHelper'),
     path('add_meth', views.add_new_method_request, name='addMethRequest'),
-    
+    path('tinymce/', include('tinymce.urls')),
 
 ]

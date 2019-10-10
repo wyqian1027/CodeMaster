@@ -3,7 +3,7 @@ from django import forms
 # from django.contrib.auth.models import User
 from django.forms import ModelForm
 from .models import Language, Library, Method
-# from tinymce.widgets import TinyMCE
+from tinymce.widgets import TinyMCE
 
 class NewLangForm(ModelForm):
     def __init__(self, *args, **kwargs):
@@ -45,6 +45,9 @@ class NewMethodForm1(ModelForm):
     parent_language = forms.ModelChoiceField(queryset=Language.objects.all(), required=True)
 
 class NewMethodForm2(ModelForm):
+
+    long_description = forms.CharField(required=False, widget=TinyMCE(attrs={'cols': 80, 'rows': 30}))
+
     def __init__(self, *args, **kwargs):
         parent_lang_id = kwargs.pop('parent_lang_id')
         super(NewMethodForm2, self).__init__(*args, **kwargs)
@@ -59,6 +62,6 @@ class NewMethodForm2(ModelForm):
         
     class Meta:
         model = Method
-        fields = ("parent_language", "parent_library", "method_name", "use_example", "short_description", "long_description")
+        fields = ("parent_language", "parent_library", "method_name", "use_example", "short_description",)
         
 

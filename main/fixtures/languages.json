@@ -17,7 +17,7 @@
         "model": "main.language",
         "pk": "3",
         "fields": {
-            "language_name": "C#"
+            "language_name": "C-sharp"
         }
     },
     {

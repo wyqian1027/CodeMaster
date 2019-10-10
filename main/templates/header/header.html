@@ -1,5 +1,7 @@
 <head>   
     {% load static %}
+    <link rel="shortcut icon" href="{% static 'main/img/favicon-96x96.png' %}">
+    <link href="{% static 'tinymce/css/prism.css' %}" rel='stylesheet'>
 
     <meta charset="utf-8">   
     <meta name="description" content="Bootstrap.">  
@@ -9,37 +11,17 @@
     <script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     
-   
-    <!-- {{ form.media }} -->
-
     <!-- <link href="{% static 'tinymce/css/prism.css' %}" rel='stylesheet'> -->
 
-    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-
-    <link rel="shortcut icon" href="{% static 'img/favicon-96x96.png' %}" type="image/x-icon">
-
-    <title>Code Master</title>
-
-    <!-- Compiled and minified CSS -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
-
-    <!-- Compiled and minified JavaScript -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+    <title>Code Maaster</title>
     
-    <!-- <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"> -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic|Merriweather:400,900&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic&display=swap" rel="stylesheet">
 
-    <link rel='stylesheet' type="text/css" href="{% static 'css/main.css' %}" >
-
-
-    <style>
-    /* body {
-        margin:20px 20px;
-    }  */
-    .form-label {
-        color: grey;
-    }
-    </style>
+    <link rel='stylesheet' type="text/css" href="{% static 'main/css/main.css' %}" >
 
 </head>
 
@@ -47,10 +29,11 @@
     {% include "includes/navbar.html" %}
     {% include "includes/messages.html" %}
     
-    <div>
+    <div class="">
     {% block content %}
     {% endblock %}
     </div>
+    <script src="{% static 'tinymce/js/prism.js' %}"></script>
 </body>
 <script>
 $(document).ready(function(){
@@ -58,4 +41,4 @@ $(document).ready(function(){
 });
 </script>
 
-    <!-- <script src="{% static 'tinymce/js/prism.js' %}"></script> -->
+

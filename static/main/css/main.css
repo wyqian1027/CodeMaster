@@ -1,0 +1,68 @@
+.table-row:hover {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.table-row {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    font-weight: 400;
+}
+.table-row td a {
+    padding-left: 10px;
+}
+.form-label {
+    color: grey;
+}
+
+body {
+    font-family: 'Gentium Book Basic', serif;
+}
+
+.navbar-brand, .dropdown{
+    font-size: 20px;
+}
+.dropdown-menu {
+    font-size: 17px;
+}
+
+.td-lib {
+    width: 10%;
+    /* font-weight: 700; */
+}
+.td-lib a {
+    color: #82AAFF;
+}
+.td-meth {
+    /* font-weight: 700; */
+}
+.td-meth a {
+    color: #FF6560;
+}
+.td-des {
+    font-family: 'Gentium Book Basic', serif;
+}
+.td-ex {
+}
+.td-ex {
+    font-weight: 700;
+}
+.td-lang {
+    width:10%;
+}
+.td-lang a {
+    color: green;
+    font-family: 'Gentium Book Basic', serif;
+
+}
+
+.long-des-title {
+    font-size: 20px;
+    color: brown;
+    font-weight: 700;
+}
+.long-des-text {
+    font-size: 20px;
+}
+
+
